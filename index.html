@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Presentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <style type="text/css">
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+    <style>
+
+      .inverse {
+        background-color: rgb(92, 180, 0);
+        color: white;
+      }
+      img[src$='timeline.jpg'] {
+        width:100%;
+      }
+      img[src$='phoenix-book.png'] {
+        width:45%;
+      }
+      img[src$='paas-iaas.png'] {
+        width:55%;
+      }
+      img[src$='it-works.jpg'] {
+        width:55%;
+      }
+      img[src$='ops.jpg'] {
+        width:65%;
+      }
+      img[src$='mordac.gif'] {
+        width:100%;
+      }
+      img[src$='wall.png'] {
+        width:80%;
+      }
+      img[src$='devops-process.png'] {
+        width:100%;
+      }
+      h1 small {
+        font-size: 40%
+      }
+      blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+        quotes: "\201C""\201D""\2018""\2019";
+      }
+      blockquote:before {
+        color: #ccc;
+        content: open-quote;
+        font-size: 4em;
+        line-height: 0.1em;
+        margin-right: 0.25em;
+        vertical-align: -0.4em;
+      }
+      blockquote p {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body onload="var slideshow = remark.create();">
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# DevOps basics
+
+__DevOps__ = software __DEV__elopment + information technology __OP__eration__S__
+
+---
+![](timeline.jpg)
+---
+## What are Operations?
+
+![](ops.jpg)
+
+???
+http://joehertvik.com/operations-management/
+
+---
+### Network Infrastructure
+
+* Infrastructure: Routers, DNS, firewalls, file servers, etc
+--
+
+* Telecommunications – Phone system, email and other communication lines
+--
+
+* Network Security, Remote access (VPN, two-factor authentication, etc)
+--
+
+* Monitoring network health (including storage, services such as email
+ or file servers, application servers, communications, etc.)
+
+---
+### Server &amp; Device Management
+
+* Server management for applications and infrastructure – Set up configuration, maintenance, upgrades, patching, repair, etc.
+--
+
+* PC provisioning – Acquisition, configuration, management, etc
+--
+
+* Mobile device management – Provisioning, assigning, managing, cell phone contracts. Providing for BYOD access to the network.
+--
+
+* Management of software application licenses
+
+---
+### Computer Operations &amp; Help Desk
+
+* Help Desk management – Support for IT Operations
+--
+
+* User provisioning – Creation and authorization of users
+--
+
+* Communications with network users when a major incident occurs impacting network services
+--
+
+* High availability and disaster recovery
+--
+
+* Backups management
+
+---
+## Dev vs Ops
+
+Development and Operation have conflicting priorities:
+
+* __Operations__ seeks organizational stability
+* __Development__ seeks change
+
+![](mordac.gif)
+???
+---
+
+### The Wall of Confusion
+
+![](wall.png)
+???
+* Lack of communication (don't speak to each other)
+* Lack of collaboration (can't cross the wall)
+* Throwing things over the wall: Here's the new version, deploy that
+---
+
+## What is DevOps?
+
+<blockquote cite="https://en.wikipedia.org/wiki/DevOps">A set of practices that emphasize the <strong>collaboration</strong> and communication of both <strong>software developers</strong> and <strong>IT professionals</strong> while <strong>automating</strong> the process of <strong>software delivery</strong> and infrastructure changes.<br><br>It aims at establishing a culture and environment where building, testing, and <strong>releasing software</strong> can happen rapidly, <strong>frequently</strong>, and more <strong>reliably</strong>.</blockquote>
+
+TL;DR: __Agile__ + __Lean__ extended to Operations
+---
+### A picture is worth a thousand words
+![](devops-process.png)
+---
+## IT Operations at Apcurium 
+
+We try to minimize our IT Operations by leveraging the cloud and use a Platform as a Service (PaaS) approach for our applications.
+
+![](paas-iaas.png)
+???
+We don't have an Operations team. But obviously we still  have IT Operations.
+---
+### Platform as a Service at Apcurium
+
+Some PaaS products we use:
+* Azure App Service
+* Azure SQL Database
+* Azure Functions
+
+PaaS helps us maximizing the work not done:
+* No VM provisioning
+* Nothing to install
+* Automatic scaling
+* Automatic backups
+* Built-in monitoring
+
+__However DevOps principles can still apply__
+???
+We have to deploy code in production and maintain it.
+---
+class: center, middle, inverse
+# Agile refresher &amp; Lean primer
+
+---
+## 12 Principles of Agile Software Development
+
+
+1. Our highest priority is to __satisfy the customer__ through early and continuous delivery of __valuable software__.
+???
+Notre plus haute priorité est de satisfaire le client
+en livrant rapidement et régulièrement des fonctionnalités
+à grande valeur ajoutée.
+--
+
+1. __Welcome changing requirements__, even late in development. Agile processes harness change for the customer's competitive advantage.
+???
+???
+Accueillez positivement les changements de besoins,
+même tard dans le projet. Les processus Agiles
+exploitent le changement pour donner un avantage
+compétitif au client.
+--
+
+1. __Deliver working software frequently__, from a couple of weeks to a couple of months, with a preference to the shorter timescale.
+???
+Livrez fréquemment un logiciel opérationnel avec des
+cycles de quelques semaines à quelques mois et une
+préférence pour les plus courts.
+--
+
+1. Business people and developers must work together daily throughout the project.
+???
+Les utilisateurs ou leurs représentants et les 
+développeurs doivent travailler ensemble quotidiennement
+tout au long du projet.
+--
+
+1. Build projects around __motivated individuals__. Give them the environment and support they need, and trust them to get the job done.
+???
+Réalisez les projets avec des personnes motivées.
+Fournissez-leur l’environnement et le soutien dont ils
+ont besoin et faites-leur confiance pour atteindre les
+objectifs fixés.
+--
+
+1. The most efficient and effective method of conveying information to and within a development team is __face-to-face conversation__.
+???
+
+La méthode la plus simple et la plus efficace pour 
+transmettre de l’information à l'équipe de développement
+et à l’intérieur de celle-ci est le dialogue en face à face.
+
+http://agilemanifesto.org/principles.html
+
+Agile manifesto doesn't mention Operations. (Deployment, Monitoring, Maintenance, etc)
+---
+## 12 Principles cont'd
+
+<ol start=7>
+  <li><strong>Working software is the primary measure of progress.</strong>
+???
+Un logiciel opérationnel est la principale mesure d’avancement.
+--
+  <li>Agile processes promote <strong>sustainable development</strong>. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+???
+Les processus Agiles encouragent un rythme de développement 
+soutenable. Ensemble, les commanditaires, les développeurs
+et les utilisateurs devraient être capables de maintenir
+indéfiniment un rythme constant.
+--
+  <li>Continuous attention to <strong>technical excellence</strong> and good design enhances agility.
+???
+Une attention continue à l'excellence technique et
+à une bonne conception renforce l’Agilité.
+--
+  <li><strong>Simplicity</strong>--the art of maximizing the amount of work not done--is essential.
+???
+La simplicité – c’est-à-dire l’art de minimiser la 
+quantité de travail inutile – est essentielle.
+--
+  <li>The best architectures, requirements, and designs emerge from <strong>self-organizing teams</strong>.
+???
+Les meilleures architectures, spécifications et 
+conceptions émergent d'équipes autoorganisées.
+--
+  <li>At regular intervals, the <strong>team reflects on how to become more effective</strong>, then tunes and adjusts its behavior accordingly.
+???
+À intervalles réguliers, l'équipe réfléchit aux moyens
+de devenir plus efficace, puis règle et modifie son
+comportement en conséquence.
+</ol>
+
+---
+## 7 Principles of Lean Software Development
+
+1. Eliminate waste
+???
+Waste is Everything not adding value to the customer
+--
+
+  * Partially done work
+???
+- Unsynchronized Code (long lived branches, code review delays)
+- Untested Code
+- Undeployed Code -> Inventory
+--
+
+  * Extra features (software bloat)
+--
+  
+  * Handoffs
+--
+  
+  * Delays (waiting)
+???
+Waiting for specs
+Waiting for design
+Waiting for code review
+Waiting for deployment
+etc
+--
+
+  * Task switching
+???
+Context switching (multiple projects)
+Interruptions, meetings
+--
+
+  * Relearning
+???
+Delays fuel relearning by lengthening feedback loops.
+Task switching leads to continual relearning.
+
+--
+
+  * Defects (bugs)
+???
+Not only bugs found, but undetected bugs too!
+---
+## 7 Principles cont'd
+
+<ol start=2>
+  <li>Amplify learning
+  <li>Decide as late as possible
+  <li>Decide as fast as possible
+  <li>Empower the team
+  <li>Build in integrity
+  <li>See the whole
+</ol>
+
+???
+Without getting into the details
+
+---
+class: center, middle, inverse
+# 3 Pillars of DevOps
+---
+## Infrastructure Automation
+
+Infrastructure automation is the process of scripting environments in order to eliminate manual deployment and configuration.
+--
+
+
+__Infrastructure as Code__ is a programmatic approach to infrastructure
+* Define your infrastructure using code and machine-readable definition files.
+* Put infrastructure and CI definition in Source Control
+* Use unit and integration testing
+???
+Something we want to achieve on Dispatch
+--
+
+
+__Immutable Infrastructure__: Switch to an approach where systems as ephemeral. Components are replaced rather than changed.  
+_Servers are cattle, not pets._
+
+---
+class: center, middle, inverse
+# DEMO
+## Azure deployment with ARM templates
+
+---
+## Continuous Delivery
+
+3 degrees of continuous delivery:
+* __Continuous Integration:__ Build, run unit tests, create artefacts
+--
+
+* __Continuous Delivery:__ Deploy to production-like environment. Perform integration and acceptance tests automatically. __Every delivery is deployable to production.__
+???
+
+--
+
+* __Continuous Deployment:__ Deploy every change to production.
+--
+
+
+Good practices:
+
+* Have very short lived branches: ~1 day
+--
+
+* Have very few branches
+--
+
+* Builds should pass the coffee test (&lt;5 min)
+--
+
+* Batch size of 1. It's not how much you can deliver, but how little.
+--
+
+* Blue-green deployment
+--
+
+* Andon Cord: Anybody can stop a release. Release must be green lit by everybody
+
+???
+Need a change in mindset from "Build this" to "Deploy this"
+
+---
+### Benefits of continuous delivery
+
+1. Time to market goes down (concept to cash)
+--
+
+  * Rapid experimentation
+  * Market validation of ideas
+--
+
+1. Quality increases, not decreases. Cease dependence on inspection to achieve quality.
+--
+
+1. Continuous delivery limits your work in progress
+--
+
+1. Urgent bug fixes can be treated like any other change and rolled out quickly without the need for a special process.
+
+---
+
+![](continuous.jpg)
+
+---
+## Reliablity Engineering
+
+Objectives of reliability engineering: 
+* Prevent or reduce the likelihood or frequency of failures.
+???
+failure = défaillance
+--
+
+* Identify and correct the causes of failures that do occur despite the efforts to prevent them.
+--
+
+* Failures happen anyway. Mitigate the effects of these failures. 
+???
+Not just an Ops thing. Developers implicated when designing applications
+---
+![](release.jpg)
+
+---
+class: center, middle, inverse
+# DEMO
+## Application Insights
+---
+
+# The Phoenix Project <small>A Novel About IT, DevOps, and Helping Your Business Win</small>
+
+![](phoenix-book.png)
+
+
+---
+
+class: center, middle, inverse
+# The End
+
+
+    </textarea>
+    <script type="text/javascript" src="remark.js"></script>
+  </body>
+</html>
