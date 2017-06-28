@@ -1,6 +1,6 @@
-# DevOps basics
-A presentation I gave at Apcurium about DevOps.  
-https://costo.github.io/devops-basics/
+# [DevOps basics](https://costo.github.io/devops-basics/)
+
+A presentation I gave at Apcurium about DevOps. Built with [remark](https://remarkjs.com/#1).
 
 Following is the list of material I used to familiarize myself with the subject and build the presentation.
 
