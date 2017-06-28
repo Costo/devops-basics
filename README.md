@@ -1,6 +1,6 @@
 # DevOps basics
 A presentation I gave at Apcurium about DevOps.  
-https://costo.github.io/devops-basics/#21
+https://costo.github.io/devops-basics/
 
 Following is the list of material I used to familiarize myself with the subject and build the presentation.
 
